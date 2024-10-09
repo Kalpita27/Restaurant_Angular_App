@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Kalnia+Glaze:wght@100..700&family=Tangerine:wght@400;700&display=swap');
+
+*{
+     font-family: "Cinzel", serif;
+     scroll-behavior: smooth;
+     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body { 
+    height: 100vh;
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+@font-face {
+    font-family: 'Bitter', serif;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

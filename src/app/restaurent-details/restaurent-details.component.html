@@ -1,0 +1,253 @@
+<div class="main_div">
+<div class="banner"  [ngStyle]="{
+    'background-image': 'url(' + restaurentDetails.backgroundImage + ')', 
+    'background-size': 'cover', 
+    'background-position': 'center',
+    'padding': '10px', 
+    'height': '85vh'
+  }">
+  
+  <div style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; color: white; width: 80%; margin-left:8%; margin-top: 5%">
+  <div class="content">
+    <h2>Welcome to {{restaurentDetails.name}}</h2>
+    <h1 class="#mb-5 wow fadeInUp" data-wow-delay="0.2s">Fresh Cooked Food At Your Door!!!</h1>
+  </div>
+
+  <!-- ------------Explore-------------- -->
+  <!-- <p><strong>Name:</strong> {{restaurentDetails.name}}</p>
+  <p><strong>Address:</strong> {{restaurentDetails.address}}</p>
+  <p><strong>Email:</strong> {{restaurentDetails.email}}</p>
+  <p><strong>Phone:</strong> {{restaurentDetails.mobile}}</p>
+  <p><strong>Services:</strong> {{restaurentDetails.services}}</p>
+  
+  <div *ngIf="restaurentDetails.menu">
+    <h3>Menu</h3>
+    <ul>
+      <li *ngFor="let item of restaurentDetails.menu">
+        {{ item.item }} - Rs. {{ item.price }}
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="restaurentDetails.customers_visited">
+    <h4>No. of Customers Visited: {{ restaurentDetails.customers_visited }}</h4>
+  </div>
+
+  <div *ngIf="restaurentDetails.monthly_revenue">
+    <h4>Monthly Revenue: Rs. {{ restaurentDetails.monthly_revenue }}</h4>
+  </div> -->
+</div>
+
+
+
+<div class="container mb-4">
+  <h1 class="explore-head">Explore More</h1>
+  <div class="row g-5">
+      <div class="col-lg-2 explore-item" *ngFor="let fd of explore;index as i" >
+              <div class="explore wow fadeInUp " *ngIf="i<=5" data-wow-delay="0.1s">
+                  <img src="{{fd.menuImg}}"/>
+                  <h1 style="  font-family: 'Cinzel', serif;">{{fd.menuName}}</h1>
+          </div>
+          
+      </div>
+  </div>
+</div>
+
+
+<div class="container-xxl py-5" id="menu">
+  <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
+      <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
+          <li class="nav-item">
+              <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill"
+                  href="#tab-1">
+                  <i class="fa fa-utensils fa-2x text-warning"></i>
+                  <div class="ps-3">
+                      <small class="text-body">Fast</small>
+                      <h6 class="mt-n1 mb-0" style="color: black;">Food</h6>
+                  </div>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-2">
+                  <i class="fa fa-utensils fa-2x text-warning"></i>
+                  <div class="ps-3">
+                      <small class="text-body">Coffe &</small>
+                      <h6 class="mt-n1 mb-0" style="color: black;">Milkshake</h6>
+                  </div>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill"
+                  href="#tab-3">
+                  <i class="fa fa-utensils fa-2x text-warning"></i>
+                  <div class="ps-3">
+                      <small class="text-body">South</small>
+                      <h6 class="mt-n1 mb-0" style="color: black;">Indian</h6>
+                  </div>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill"
+                  href="#tab-4">
+                  <i class="fa fa-utensils fa-2x text-warning"></i>
+                  <div class="ps-3">
+                      <small class="text-body">Street</small>
+                      <h6 class="mt-n1 mb-0" style="color: black;">Food</h6>
+                  </div>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill"
+                  href="#tab-5">
+                  <i class="fa fa-utensils fa-2x text-warning"></i>
+                  <div class="ps-3">
+                      <small class="text-body">Rolls &</small>
+                      <h6 class="mt-n1 mb-0" style="color: black;">Sandwitch</h6>
+                  </div>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill"
+                  href="#tab-6">
+                  <i class="fa fa-utensils fa-2x text-warning"></i>
+                  <div class="ps-3">
+                      <small class="text-body">Desserts &</small>
+                      <h6 class="mt-n1 mb-0" style="color: black;">Juices</h6>
+                  </div>
+              </a>
+          </li>
+      </ul>
+      <div class="tab-content">
+          <div id="tab-1" class="tab-pane fade show p-0 active">
+              <div class="row g-4">
+                  <div class="col-lg-6" *ngFor="let md of menuData;index as i">
+                      <div class="d-flex align-items-center" *ngIf="i<=10">
+                          <img class="flex-shrink-0 img-fluid rounded" src="{{md.menuImg}}" 
+                              style="width: 100px; height: 80px;">
+                          <div class="w-100 d-flex flex-column text-start ps-4">
+                              <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                  <span style="color: black;">{{md.menuName}}</span>
+                                  <span class="text-primary">{{md.menuPrice}}</span>
+                              </h5>
+                              <small class="fst-italic" style="color: black;">{{md.menuDetails}}</small>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div id="tab-2" class="tab-pane fade show p-0">
+              <div class="row g-4">
+
+                  <div class="col-lg-6" *ngFor="let cd of CData;index as i">
+                      <div class="d-flex align-items-center" *ngIf="i<=8">
+                          <img class="flex-shrink-0 img-fluid rounded" src="{{cd.menuImg}}" 
+                              style="width: 100px; height: 80px;">
+                          <div class="w-100 d-flex flex-column text-start ps-4">
+                              <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                  <span style="color: black;">{{cd.menuName}}</span>
+                                  <span class="text-primary">{{cd.menuPrice}}</span>
+                              </h5>
+                              <small class="fst-italic" style="color: black;">{{cd.menuDetails}}</small>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div id="tab-3" class="tab-pane fade show p-0">
+              <div class="row g-4">
+                  <div class="col-lg-6" *ngFor="let sd of SData;index as i">
+                      <div class="d-flex align-items-center" *ngIf="i<=8">
+                          <img class="flex-shrink-0 img-fluid rounded" src="{{sd.menuImg}}" alt=""
+                              style="width: 100px; height: 80px;">
+                          <div class="w-100 d-flex flex-column text-start ps-4">
+                              <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                  <span style="color: black;">{{sd.menuName}}</span>
+                                  <span class="text-primary">{{sd.menuPrice}}</span>
+                              </h5>
+                              <small class="fst-italic" style="color: black;">{{sd.menuDetails}}</small>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div id="tab-4" class="tab-pane fade show p-0">
+              <div class="row g-4">
+                  <div class="col-lg-6" *ngFor="let Sf of SFData;index as i">
+                      <div class="d-flex align-items-center" *ngIf="i<=16">
+                          <img class="flex-shrink-0 img-fluid rounded" src="{{Sf.menuImg}}" alt=""
+                              style="width: 100px; height: 80px;">
+                          <div class="w-100 d-flex flex-column text-start ps-4">
+                              <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                  <span style="color: black;">{{Sf.menuName}}</span>
+                                  <span class="text-primary">{{Sf.menuPrice}}</span>
+                              </h5>
+                              <small class="fst-italic" style="color: black;">{{Sf.menuDetails}}</small>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div><div id="tab-5" class="tab-pane fade show p-0">
+              <div class="row g-4">
+                  <div class="col-lg-6" *ngFor="let Rs of RData;index as i">
+                      <div class="d-flex align-items-center" *ngIf="i<=16">
+                          <img class="flex-shrink-0 img-fluid rounded" src="{{Rs.menuImg}}" alt=""
+                              style="width: 100px; height: 80px;">
+                          <div class="w-100 d-flex flex-column text-start ps-4">
+                              <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                  <span style="color: black;">{{Rs.menuName}}</span>
+                                  <span class="text-primary">{{Rs.menuPrice}}</span>
+                              </h5>
+                              <small class="fst-italic" style="color: black;">{{Rs.menuDetails}}</small>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div><div id="tab-6" class="tab-pane fade show p-0">
+              <div class="row g-4">
+                  <div class="col-lg-6" *ngFor="let Ds of DData;index as i">
+                      <div class="d-flex align-items-center" *ngIf="i<=8">
+                          <img class="flex-shrink-0 img-fluid rounded" src="{{Ds.menuImg}}" alt=""
+                              style="width: 100px; height: 80px;">
+                          <div class="w-100 d-flex flex-column text-start ps-4">
+                              <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                  <span style="color: black;">{{Ds.menuName}}</span>
+                                  <span class="text-primary">{{Ds.menuPrice}}</span>
+                              </h5>
+                              <small class="fst-italic" style="color: black;">{{Ds.menuDetails}}</small>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- <div class="container mt-5 mb-4">
+
+  <div class="row">
+
+      <div class="col-lg-4" *ngFor="let fd of foodData;index as i">
+
+          <div class="foodbox mt-3 mb-3" *ngIf="i<=5">
+              <img src="{{fd.foodImg}}">
+              <h1 style="margin-left: 35%;">{{fd.foodName}}</h1>
+              <p style="font-size: 17px;">{{fd.foodDetails}}</p>
+              <p style="font-size: 18px; font-style: italic;">{{fd.foodPrice | currency: 'INR'}}</p>
+              <br/>
+              <a class="buybtn" [routerLink]="['/menu', fd.id]">Buy Now &nbsp;</a>
+          </div>
+
+      </div>
+
+  </div>
+</div> -->
+
+</div>

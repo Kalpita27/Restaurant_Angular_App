@@ -1,0 +1,116 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "name": "Lalit",
+      "address": "Pune",
+      "email": "lalit@gmail.com",
+      "services": "Indian",
+      "mobile": 9090909090,
+      "backgroundImage": "../assets/img/bg.jpg",
+      "revenue": [4000, 6000, 9000, 6500],
+      "months": ["January", "February", "March", "April", "May"],
+      "visits": [105, 130, 120, 150, 125],
+      "popularFood": [
+        { "name": "Burger", "count": 50 },
+        { "name": "Pizza", "count": 30 },
+        { "name": "Pasta", "count": 20 }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Grand Hayat",
+      "address": "Pune",
+      "email": "Hayat@gmail.com",
+      "services": "Indian",
+      "mobile": 9090909090,
+      "backgroundImage": "../assets/img/bg1.jpg",
+          "revenue": [5000, 7000, 3000, 6050],
+      "months": ["January", "February", "March", "April", "May"],
+      "visits": [100, 150, 120, 140, 135],
+      "popularFood": [
+        { "name": "Burger", "count": 50 },
+        { "name": "Pizza", "count": 30 },
+        { "name": "Pasta", "count": 20 }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Le Meridian",
+      "address": "Pune Mumbai highway",
+      "email": "Meridian@gmail.com",
+      "services": "Chinese",
+      "mobile": 9999999999,
+      "backgroundImage": "../assets/img/bg2.jpg",
+          "revenue": [5500, 1000, 3000, 8500],
+      "months": ["January", "February", "March", "April", "May"],
+      "visits": [130, 100, 145, 120, 115],
+      "popularFood": [
+        { "name": "Burger", "count": 50 },
+        { "name": "Pizza", "count": 30 },
+        { "name": "Pasta", "count": 20 }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Shereton Grand",
+      "address": "Koregaon park",
+      "email": "GrandInfo@gmail.com",
+      "services": "contenental",
+      "mobile": 797989896767,
+      "backgroundImage": "../assets/img/bg3.jpg",
+          "revenue": [4900, 3700, 8000, 6000],
+      "months": ["January", "February", "March", "April", "May"],
+      "visits": [140, 157, 120, 108, 165],
+      "popularFood": [
+        { "name": "Burger", "count": 50 },
+        { "name": "Pizza", "count": 30 },
+        { "name": "Pasta", "count": 20 }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Shereton Grand",
+      "address": "Koregaon park",
+      "email": "GrandInfo@gmail.com",
+      "services": "contenental",
+      "mobile": 797989896767,
+      "backgroundImage": "../assets/img/bg4.jpg",
+          "revenue": [2000, 6500, 8000, 5000],
+      "months": ["January", "February", "March", "April", "May"],
+      "visits": [100, 150, 120, 140, 135],
+      "popularFood": [
+        { "name": "Burger", "count": 50 },
+        { "name": "Pizza", "count": 30 },
+        { "name": "Pasta", "count": 20 }
+      ]
+    }
+  ],
+  "signup": [
+    {
+      "name": "Taj",
+      "email": "TajManagement@gmail.com",
+      "mobile": 999999999,
+      "password": "password@123",
+      "id": 1
+    },
+    {
+      "name": "Admin",
+      "email": "Marvellous@gmail.com",
+      "mobile": 3164631649,
+      "password": "Admin@123",
+      "id": 2
+    },
+    {
+      "name": "abc",
+      "email": "abc@gmail.com",
+      "mobile": 1234567890,
+      "password": "abc",
+      "id": 3
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
