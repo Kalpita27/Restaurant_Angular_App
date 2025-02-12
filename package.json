@@ -10,8 +10,8 @@
     "postinstall": "node --openssl-legacy-provider"
   },
   "engines": {
-    "node": "22.x"
-  },
+  "node": "22.x"
+},
   "private": true,
   "dependencies": {
     "@angular/animations": "~12.2.0",
