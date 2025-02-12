@@ -53,7 +53,8 @@ export class LoginComponent implements OnInit
         alert("User Not Found!!!") //msg to user if credentials are wrong
       }
     },err=>{
-      alert("Something went wrong"); //msg from server 
+      console.error("Login error:", err);  // ✅ Debugging step
+    alert("Something went wrong ❌");
     }
     )   
   }
