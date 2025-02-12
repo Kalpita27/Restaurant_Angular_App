@@ -11,8 +11,7 @@ import { Router } from '@angular/router';
 
 export class LoginComponent implements OnInit 
 {
-  private baseUrl = "https://restaueant-json-server.vercel.app";  // ✅ Correct JSON Server URL
-  
+
   loginForm!: FormGroup;
   constructor(private formbuilder: FormBuilder, private _http:HttpClient, private _router:Router ) { }
 
@@ -28,18 +27,27 @@ export class LoginComponent implements OnInit
 
   logIn() 
   {
+    ///////////this is from sir project to reset the form//////////////
     // console.log(this.loginForm.value);
     //       alert("Marvellous" + ' logged in successfully');
     //       this._router.navigate(['/restaurent']);
     //       this.loginForm.reset(); 
-    this._http.get<any>(`${this.baseUrl}/signup`).subscribe(res=>{
+    // ///////////////////////////////////
+
+    this._http.get<any>("https://restaueant-json-server.vercel.app/signup").subscribe(res=>{
       const user = res.find((a:any)=>{
         return a.email === this.loginForm.value.email && a.password === this.loginForm.value.password
       })
       if(user){
-        alert("Login is successfull!!!");  //msg for user if the credentials are correct
-        this.loginForm.reset();
-        this._router.navigate(['/restaurent']);
+        alert("Login is successfull!!!🎉");  //msg for user if the credentials are correct
+        // this.loginForm.reset();
+        // this._router.navigate(['/restaurent']);
+
+        // //////////This is for netlify////////////////////
+        localStorage.setItem("user", JSON.stringify(user));  // ✅ Store user data
+      this._router.navigate(['/restaurent']);  // ✅ Redirect after login
+        // ////////////////////////////////////////////////
+
       }
       else{
         alert("User Not Found!!!") //msg to user if credentials are wrong
