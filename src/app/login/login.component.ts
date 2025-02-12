@@ -11,6 +11,8 @@ import { Router } from '@angular/router';
 
 export class LoginComponent implements OnInit 
 {
+  private baseUrl = "https://restaueant-json-server.vercel.app";  // ✅ Correct JSON Server URL
+  
   loginForm!: FormGroup;
   constructor(private formbuilder: FormBuilder, private _http:HttpClient, private _router:Router ) { }
 
@@ -22,13 +24,15 @@ export class LoginComponent implements OnInit
     });
   }
 
+
+
   logIn() 
   {
     // console.log(this.loginForm.value);
     //       alert("Marvellous" + ' logged in successfully');
     //       this._router.navigate(['/restaurent']);
     //       this.loginForm.reset(); 
-    this._http.get<any>("http://localhost:3000/signup").subscribe(res=>{
+    this._http.get<any>(`${this.baseUrl}/signup`).subscribe(res=>{
       const user = res.find((a:any)=>{
         return a.email === this.loginForm.value.email && a.password === this.loginForm.value.password
       })
