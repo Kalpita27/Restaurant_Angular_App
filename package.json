@@ -4,9 +4,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "node --openssl-legacy-provider ./node_modules/@angular/cli/bin/ng build --configuration=production",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "postinstall": "node --openssl-legacy-provider"
+  },
+  "engines": {
+    "node": "22.x"
   },
   "private": true,
   "dependencies": {
@@ -18,15 +22,31 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "core-js": "^3.40.0",
     "json-server": "^0.17.0",
+    "rimraf": "^6.0.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
+    "uuid": "^11.0.5",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~12.2.10",
     "@angular/cli": "~12.2.10",
     "@angular/compiler-cli": "~12.2.0",
+    "@babel/core": "^7.26.8",
+    "@babel/plugin-transform-async-generator-functions": "^7.26.8",
+    "@babel/plugin-transform-class-properties": "^7.25.9",
+    "@babel/plugin-transform-class-static-block": "^7.26.0",
+    "@babel/plugin-transform-dynamic-import": "^7.25.9",
+    "@babel/plugin-transform-export-namespace-from": "^7.25.9",
+    "@babel/plugin-transform-json-strings": "^7.25.9",
+    "@babel/plugin-transform-logical-assignment-operators": "^7.25.9",
+    "@babel/plugin-transform-nullish-coalescing-operator": "^7.26.6",
+    "@babel/plugin-transform-numeric-separator": "^7.25.9",
+    "@babel/plugin-transform-object-rest-spread": "^7.25.9",
+    "@babel/plugin-transform-private-methods": "^7.25.9",
+    "@babel/preset-env": "^7.26.8",
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
     "jasmine-core": "~3.8.0",
